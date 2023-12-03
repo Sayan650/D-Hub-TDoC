@@ -1,0 +1,62 @@
+@import '../../style.scss';
+
+.home-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; 
+    background-color: $bg;
+}
+
+.left-content {
+    flex: 1;
+    margin-left: 100px;
+}
+
+.text {
+    font-family: $font;
+    font-size: 64px;
+    color: $textBasic;
+}
+
+.subtext {
+    font-family: $font;
+    font-size: 64px;
+    font-weight: bold;
+    color: $textNeon;
+}
+
+.description {
+    padding: top, bottom, 20px;
+    font-family: $font;
+    font-size: 20px;
+    color: $textSoft;
+}
+
+.btn-container {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px;
+    width: 200px;
+    background-color: $textNeon; 
+    color: $bg; 
+    border: none;
+    border-radius: 5px;
+    font-family: $font;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: mix($textNeon, $bg, 10%);
+}
+
+
+.right-content {
+    flex: 1;
+    margin-right: 100px;
+}
