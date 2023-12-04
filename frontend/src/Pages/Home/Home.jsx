@@ -1,6 +1,6 @@
 // Home.jsx
 import React from 'react';
-import Navbar from '../../Components/Navbar';
+import Navbar from '../../Components/Navbar/Navbar';
 import './Home.scss';
 
 const Home = () => {
