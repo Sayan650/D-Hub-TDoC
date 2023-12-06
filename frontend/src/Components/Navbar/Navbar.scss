@@ -1,4 +1,4 @@
-$navbar-background-color: #414666;
+$bgSoft: #414666;
 $bg: #27283D;
 $navbar-height: 140px;
 $navbar-padding: 20px;
@@ -9,7 +9,7 @@ $textNeon: #27E5FF;
 $font: 'Poppins', sans-serif;
 
 .navbar-container {
-  background-color: $navbar-background-color;
+  background-color: $bgSoft;
   height: $navbar-height;
   display: flex;
   justify-content: space-between;

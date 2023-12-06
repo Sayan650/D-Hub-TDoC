@@ -1,10 +1,10 @@
 import React from 'react'
 import Navbar from '../../Components/Navbar/Navbar'
-import './User.scss'
+import './User1.scss'
 import ProfileCard from '../../Components/ProfileCard/ProfileCard'
-import RepoCard1 from '../../Components/RepoCard/RepoCard1'
+import RepoCard1 from '../../Components/RepoCard1/RepoCard1'
 
-const User = () => {
+const User1 = () => {
   return (
     <div>
       <Navbar />
@@ -22,4 +22,4 @@ const User = () => {
   )
 }
 
-export default User
+export default User1
