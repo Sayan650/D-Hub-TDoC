@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.21;
+pragma solidity >=0.7.0 <0.9.0;
 
 contract D_hub {
     mapping(address => bool) public isRegistered;
@@ -10,6 +10,10 @@ contract D_hub {
     struct Commit {
         string CommitMsg;
         string ipfsCID;
+    }
+
+    function getAddressByProfileName(string memory profileName) public view returns (address) {
+        return profileNameMap[profileName];
     }
 
     mapping(address => string[]) public userProjects;
@@ -24,6 +28,8 @@ contract D_hub {
         isRegistered[msg.sender] = true;
 
         profileNameMap[profileName] = msg.sender;
+
+        
     }
 
     function authenticateUser() public view returns (bool) {
