@@ -1,8 +1,13 @@
 @import '../../style.scss';
 
+.box{
+  display: flex;
+  gap: 18rem;
+}
 .user-content {
   display: flex;
-  align-items: center;
+  // align-items: center;
+  margin-top: 30px;
   background-color: $bg;
   position: relative;
 }
@@ -11,11 +16,12 @@
   flex: 1;
 }
 
-.right-content {
+.repo-content {
     display: flex;
     align-items: flex-start;
     position: relative;
     flex-direction: column;
+    
   }
   
   .search-and-button-container {

@@ -1,21 +1,21 @@
 import React from 'react';
 import './ProfileCard.scss';
 
-const ProfileCard = ({ name, username, followers, followings }) => {
+const ProfileCard = ({ profilename  }) => {
   return (
     <div className="profile-card">
       <div className="profile-card-header">
-        <img src="../../profile.jpg" alt={name} className="profile-picture"/><br />
-        <h3 className="profile-name">{name}<span>Rishav Raj Kumar</span></h3>
-        <p className="profile-username">{username}<span>rishav4101</span></p>
+        <img src="../../profile.jpg" alt={profilename} className="profile-picture"/><br />
+        <h3 className="profile-name"><span>{profilename}</span></h3>
+        
       </div>
       <div className="profile-card-stats">
         <div className="profile-card-stat1">
-          {followers}
+          {/* {followers} */}
           <span><span>20 </span>Followers</span>
         </div>
         <div className="profile-card-stat2">
-          {followings}
+          {/* {followings} */}
           <span><span>20 </span>Following</span>
         </div>
       </div>
