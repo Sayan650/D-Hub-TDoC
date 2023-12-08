@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useCallback } from 'react';
+import { useDropzone } from 'react-dropzone'
 import Navbar from '../../Components/Navbar/Navbar';
 import './Repo.scss';
+import useIPFSUpload from "../../IPFS/ipfshook";
 
 const Repo = () => {
+
+  const onDrop = useCallback((acceptedFiles) => {
+    console.log('Dropped files:', acceptedFiles);
+  }, []);
+
+  const { getRootProps, getInputProps } = useDropzone({
+    onDrop,
+  });
+
+
+
   return (
     <div>
       <Navbar />
       <div className="repo-container">
         <div className="repo-main">
           <div className="repo-header">
-            <h2>Repository Name</h2>
+            <h2>D-Hub_TDoC_Blockchain</h2>
             <div className="public-badge">Public</div>
           </div>
           <div className="branch-dropdown">
@@ -54,6 +67,10 @@ const Repo = () => {
               <p>This project is an implementation of a basic blockchain in JavaScript.</p>
             </div>
           </div>
+          <div {...getRootProps()} className="drag-drop-container">
+            <input {...getInputProps()} />
+            <button>Upload Files</button>
+          </div>
         </div>
         <div className="repo-sidebar">
           <div className="about">
@@ -65,5 +82,6 @@ const Repo = () => {
     </div>
   );
 };
+
 
 export default Repo;
